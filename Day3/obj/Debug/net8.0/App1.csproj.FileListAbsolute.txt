@@ -1,0 +1,29 @@
+C:\Users\VC\source\repos\App1Solution\App1\bin\Debug\net8.0\App1.exe
+C:\Users\VC\source\repos\App1Solution\App1\bin\Debug\net8.0\App1.deps.json
+C:\Users\VC\source\repos\App1Solution\App1\bin\Debug\net8.0\App1.runtimeconfig.json
+C:\Users\VC\source\repos\App1Solution\App1\bin\Debug\net8.0\App1.dll
+C:\Users\VC\source\repos\App1Solution\App1\bin\Debug\net8.0\App1.pdb
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.AssemblyInfoInputs.cache
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.AssemblyInfo.cs
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.dll
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\refint\App1.dll
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.pdb
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\App1.genruntimeconfig.cache
+C:\Users\VC\source\repos\App1Solution\App1\obj\Debug\net8.0\ref\App1.dll
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\bin\Debug\net8.0\App1.exe
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\bin\Debug\net8.0\App1.deps.json
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\bin\Debug\net8.0\App1.runtimeconfig.json
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\bin\Debug\net8.0\App1.dll
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\bin\Debug\net8.0\App1.pdb
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.AssemblyInfoInputs.cache
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.AssemblyInfo.cs
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.sourcelink.json
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.dll
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\refint\App1.dll
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.pdb
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\App1.genruntimeconfig.cache
+C:\Users\VC\Documents\Genspark Daywise Task\Day3\obj\Debug\net8.0\ref\App1.dll
