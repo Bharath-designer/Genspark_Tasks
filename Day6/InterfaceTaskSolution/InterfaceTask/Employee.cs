@@ -1,4 +1,4 @@
-﻿abstract class Employee
+﻿abstract class Employee:GovtRules
 {
     public int EmpId { get; set; }
     public string Name { get; set; }
