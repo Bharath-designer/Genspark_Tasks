@@ -1,6 +1,6 @@
 ﻿public class PatientRepository : IRepository<Patient>
 {
-    private Dictionary<int, Patient> _patients = new Dictionary<int, Patient>(); // Dictionary to store patients, where key is the patient's ID
+    private Dictionary<int, Patient> _patients = new Dictionary<int, Patient>();
 
     public void Add(Patient entity)
     {

@@ -1,6 +1,6 @@
 ﻿public class AppointmentRepository : IRepository<Appointment>
 {
-    private Dictionary<int, Appointment> _appointments = new Dictionary<int, Appointment>(); // Dictionary to store appointments, where key is the appointment's ID
+    private Dictionary<int, Appointment> _appointments = new Dictionary<int, Appointment>();
 
     public void Add(Appointment entity)
     {
