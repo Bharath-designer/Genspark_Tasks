@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorApp", "DoctorApp\DoctorApp.csproj", "{80DDB4C0-E25C-474D-B4B2-D81C7D96D3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppLibrary", "DoctorAppLibrary\DoctorAppLibrary.csproj", "{B88F61FA-34B7-4914-8144-9F20C3A59320}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80DDB4C0-E25C-474D-B4B2-D81C7D96D3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DDB4C0-E25C-474D-B4B2-D81C7D96D3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DDB4C0-E25C-474D-B4B2-D81C7D96D3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DDB4C0-E25C-474D-B4B2-D81C7D96D3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88F61FA-34B7-4914-8144-9F20C3A59320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88F61FA-34B7-4914-8144-9F20C3A59320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88F61FA-34B7-4914-8144-9F20C3A59320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88F61FA-34B7-4914-8144-9F20C3A59320}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FD8AB3A-51ED-43B2-908E-D9FEC7CF708C}
+	EndGlobalSection
+EndGlobal
