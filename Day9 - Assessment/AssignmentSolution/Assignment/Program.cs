@@ -8,6 +8,7 @@ class Program
 
     static AdminMenu adminMenu = new AdminMenu(quizzes);
     static UserMenu userMenu = new UserMenu(quizzes);
+
     static void Main(string[] args)
     {
         users.Add(new User("admin", "admin", Role.Admin));
@@ -26,10 +27,10 @@ class Program
                 switch (selectedOption)
                 {
                     case "1":
-                        Login();
+                        currentUser = AuthController.Login(users);
                         break;
                     case "2":
-                        Register();
+                        AuthController.Register(users);
                         break;
                     case "3":
                         isExited = true;
@@ -102,33 +103,6 @@ class Program
                 Console.WriteLine("Invalid option.");
                 break;
         }
-    }
-
-    static void Login()
-    {
-        Console.Write("Enter username: ");
-        string username = Console.ReadLine();
-        Console.Write("Enter password: ");
-        string password = Console.ReadLine();
-        currentUser = users.FirstOrDefault(u => u.Username == username && u.Password == password);
-        if (currentUser == null)
-        {
-            Console.WriteLine("Invalid username or password.");
-        }
-        else
-        {
-            Console.WriteLine($"Welcome, {currentUser.Username}!");
-        }
-    }
-
-    static void Register()
-    {
-        Console.Write("Enter username: ");
-        string username = Console.ReadLine();
-        Console.Write("Enter password: ");
-        string password = Console.ReadLine();
-        users.Add(new User(username, password, Role.User));
-        Console.WriteLine("User registered successfully.");
     }
 
 }
