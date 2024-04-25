@@ -2,12 +2,18 @@
 
 namespace ShoppingDALLibrary
 {
-    public class Repository<K, T> : IRepository<K, T>
+    public class Repository<K, T> : IRepository<K, T> where T : class
     {
         Dictionary<K, T> _items = new Dictionary<K, T>();
+        private int LatestId = 0;
         public List<T> GetAll()
         {
             return _items.Values.ToList();
+        }
+
+        public int GetLatestId()
+        {
+            return LatestId;
         }
 
         public T GetById(K id)
@@ -16,10 +22,11 @@ namespace ShoppingDALLibrary
             {
                 return item;
             }
-            throw new IdNotFoundException($"Item with ID {id} not found.");
+            return null;
         }
         public void Add(K id, T entity)
         {
+            LatestId +=1;
             if (_items.ContainsKey(id))
             {
                 throw new IdAlreadyFoundException($"An item with ID {id} already exists.");

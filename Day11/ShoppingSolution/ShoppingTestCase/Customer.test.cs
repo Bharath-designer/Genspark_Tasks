@@ -4,55 +4,45 @@ using ShoppingModelLibrary;
 
 namespace ShoppingTestCase
 {
-    public class Tests
+    public class CustomerTest
     {
         ICustomerService _customerService;
         [SetUp]
         public void Setup()
         {
-            IRepository<int, Customer> repo = new Repository<int, Customer>();
-            _customerService = new CustomerBL(repo);
+            IRepository<int, Customer> customerRepo = new Repository<int, Customer>();
+            IRepository<int, List<Order>> orderRepo = new Repository<int, List<Order>>();
+            IRepository<int, Cart> cartRepo= new Repository<int, Cart>();
+            _customerService = new CustomerBL(customerRepo, cartRepo, orderRepo);
         }
 
         [Test]
         public void AddCustomerSuccssTest()
         {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(1, "Ram", cart, new List<ShoppingModelLibrary.Order>());
+            string customerName = "Ram";
 
-            _customerService.AddCustomer(customer.Id, customer);
-        }
+            int customerId = _customerService.AddCustomer(customerName);
 
-        [Test]
-        public void AddCustomerFailTest()
-        {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(2, "Ram", cart, new List<ShoppingModelLibrary.Order>());
-
-            _customerService.AddCustomer(customer.Id, customer);
-
-            Assert.Throws<IdAlreadyFoundException>(() =>
-            {
-                _customerService.AddCustomer(customer.Id, customer);
-            });
+            Assert.AreEqual(1, customerId);
         }
 
         [Test]
         public void GetAllCustomerSuccess()
         {
-            _customerService.GetAllCustomers();
+            List<Customer> customers = _customerService.GetAllCustomers();
+
+            Assert.NotNull(customers);
         }
 
         [Test]
         public void GetCustomerSuccess()
         {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(3, "Ram", cart, new List<ShoppingModelLibrary.Order>());
+            string customerName = "Ram";
+            int customerId = _customerService.AddCustomer(customerName);
 
-            _customerService.AddCustomer(customer.Id, customer);
+            Customer customer = _customerService.GetCustomerById(customerId);
 
-            _customerService.GetCustomerById(customer.Id);
-
+            Assert.NotNull(customer);
         }
 
         [Test]
@@ -66,26 +56,23 @@ namespace ShoppingTestCase
         [Test]
         public void UpdateCustomerSuccessTest()
         {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(4, "Ram", cart, new List<ShoppingModelLibrary.Order>());
-            _customerService.AddCustomer(customer.Id, customer);
+            string customerName = "Ram";
+            int customerId = _customerService.AddCustomer(customerName);
 
-            Customer updatedCustomer = new Customer(4, "Ravi", cart, new List<ShoppingModelLibrary.Order>());
-            _customerService.UpdateCustomer(customer.Id, updatedCustomer);
+            Customer customer = _customerService.GetCustomerById(customerId);
 
-            Customer retrievedCustomer = _customerService.GetCustomerById(customer.Id);
-            Assert.AreEqual(updatedCustomer.Id, retrievedCustomer.Id);
+            _customerService.UpdateCustomer(customerId, customer);
+
+            Assert.AreEqual(customerId, customer.Id);
         }
 
         [Test]
         public void UpdateCustomerFailTest()
         {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(999, "Ram", cart, new List<ShoppingModelLibrary.Order>());
-
+            
             Assert.Throws<IdNotFoundException>(() =>
             {
-                _customerService.UpdateCustomer(customer.Id, customer);
+                _customerService.UpdateCustomer(999, null);
 
             });
         }
@@ -93,18 +80,16 @@ namespace ShoppingTestCase
         [Test]
         public void DeleteCustomerSuccessTest()
         {
-            Cart cart = new Cart(1, new List<Product>(), 1);
-            Customer customer = new Customer(5, "Ram", cart, new List<ShoppingModelLibrary.Order>());
-            _customerService.AddCustomer(customer.Id, customer);
+            string customerName = "Ram";
+            int customerId = _customerService.AddCustomer(customerName);
 
-            _customerService.DeleteCustomer(customer.Id);
+            _customerService.DeleteCustomer(customerId);
 
         }
 
         [Test]
         public void DeleteCustomerFailTest()
         {
-
             Assert.Throws<IdNotFoundException>(() =>
             {
                 _customerService.DeleteCustomer(999);

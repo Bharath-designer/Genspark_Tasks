@@ -6,7 +6,7 @@ namespace ShoppingBLLibrary
 {
     public interface ICustomerService
     {
-        void AddCustomer(int id, Customer customer);
+        int AddCustomer(string customerName);
         void UpdateCustomer(int customerId, Customer customer);
         Customer GetCustomerById(int customerId);
         List<Customer> GetAllCustomers();

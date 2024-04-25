@@ -6,17 +6,15 @@ namespace ShoppingModelLibrary
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int CartId { get; set; }
+        public int OrdersId { get; set; }
 
-        public Cart Cart { get; set; }
-
-        public List<Order> Orders { get; set; }
-
-        public Customer(int id, string name, Cart cart, List<Order> orders)
+        public Customer(int id, string name, int cartId, int ordersId)
         {
             Id = id;
             Name = name;
-            Cart = cart;
-            Orders = orders;
+            CartId = cartId;
+            OrdersId = ordersId;
         }
     }
 }

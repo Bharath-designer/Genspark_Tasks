@@ -29,7 +29,11 @@ namespace ShoppingBLLibrary
 
         public Product GetProductById(int productId)
         {
-            return _repository.GetById(productId);
+            Product product = _repository.GetById(productId);
+            if (product == null) {
+                throw new IdNotFoundException("Id not found"); 
+            }
+            return product;
         }
 
         public void UpdateProduct(int productId, Product product)

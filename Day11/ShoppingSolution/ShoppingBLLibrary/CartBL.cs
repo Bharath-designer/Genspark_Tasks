@@ -11,10 +11,22 @@ namespace ShoppingBLLibrary
         {
             _repository = repo;
         }
-    
-        public void AddCart(int id, Cart cart)
+
+        public void AddCartToCustomer(int cartId, Cart cart)
         {
-            _repository.Add(id, cart);
+            if (_repository.GetById(cartId) == null)
+                _repository.Add(cartId, cart);
+            else
+                throw new IdAlreadyFoundException("Cart with the given ID already found");
+        }
+
+        public void AddItemsToCart(int cartId, Product product)
+        {
+            Cart cart = _repository.GetById(cartId);
+            if (cart != null)
+                cart.Products.Add(product);
+            else
+                throw new IdNotFoundException("Id not found");
         }
 
         public void DeleteCart(int cartId)

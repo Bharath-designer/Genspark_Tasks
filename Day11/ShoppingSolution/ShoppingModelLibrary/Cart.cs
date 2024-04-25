@@ -1,18 +1,13 @@
-﻿
-
-namespace ShoppingModelLibrary
+﻿namespace ShoppingModelLibrary
 {
     public class Cart
     {
         public int Id { get; set; }
         public List<Product> Products { get; set; }
 
-        public int CartOwner {  get; set; }
-
-        public Cart(int id, List<Product> products, int cartOwner) {
+        public Cart(int id, List<Product> products) {
             Id = id;    
             Products = products;
-            CartOwner = cartOwner;
         }
     }
 }

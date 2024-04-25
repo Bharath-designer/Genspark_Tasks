@@ -100,7 +100,7 @@ namespace ShoppingTestCase
             _productService.AddProduct(product.Id, product);
 
             _productService.DeleteProduct(product.Id);
-            
+
             Assert.Throws<IdNotFoundException>(() =>
             {
                 _productService.GetProductById(product.Id);

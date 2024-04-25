@@ -8,5 +8,6 @@ namespace ShoppingDALLibrary
         void Add(K id, T entity);
         void Update(K id, T entity);
         void Delete(K id);
+        int GetLatestId();
     }
 }
