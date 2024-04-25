@@ -24,7 +24,7 @@ namespace ShoppingTestCase
         [Test]
         public void AddOrderSuccessTest()
         {
-            Order order = new Order(1, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(1, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
 
             _orderService.AddOrder(order.Id, order);
 
@@ -36,10 +36,11 @@ namespace ShoppingTestCase
         public void AddOrderSuccessTest2()
         {
             Product product1 = new Product(1, "Headphone",Currency.Rupee, 600);
-            List<Product> products = new List<Product>();
-            products.Add(product1);
-            products.Add(product1);
-            products.Add(product1);
+            OrderedProduct orderedProduct = new OrderedProduct(product1, 600, 4);
+            List<OrderedProduct> products = new List<OrderedProduct>();
+            products.Add(orderedProduct);
+            products.Add(orderedProduct);
+            products.Add(orderedProduct);
             Order order = new Order(1, products, DateTime.Now, Currency.Rupee, 1800);
 
             _orderService.AddOrder(order.Id, order);
@@ -51,7 +52,7 @@ namespace ShoppingTestCase
         [Test]
         public void AddOrderFailTest()
         {
-            Order order = new Order(2, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(2, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
 
             _orderService.AddOrder(order.Id, order);
 
@@ -62,9 +63,26 @@ namespace ShoppingTestCase
         }
 
         [Test]
+        public void AddOrderFailTest2()
+        {
+            Product product1 = new Product(1, "Headphone", Currency.Rupee, 600);
+            OrderedProduct orderedProduct = new OrderedProduct(product1, 600, 6);
+            List<OrderedProduct> products = new List<OrderedProduct>();
+            products.Add(orderedProduct);
+            products.Add(orderedProduct);
+            products.Add(orderedProduct);
+            Order order = new Order(10, products, DateTime.Now, Currency.Rupee, 1800);
+
+            Assert.Throws<QuantityExceededException>(() =>
+            {
+                _orderService.AddOrder(order.Id, order);
+            });
+        }
+
+        [Test]
         public void GetAllOrdersSuccessTest()
         {
-            Order order = new Order(3, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(3, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
 
             _orderService.AddOrder(order.Id, order);
 
@@ -75,7 +93,7 @@ namespace ShoppingTestCase
         [Test]
         public void GetOrderByIdSuccessTest()
         {
-            Order order = new Order(4, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(4, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
 
             _orderService.AddOrder(order.Id, order);
 
@@ -94,10 +112,10 @@ namespace ShoppingTestCase
         [Test]
         public void UpdateOrderSuccessTest()
         {
-            Order order = new Order(5, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(5, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
             _orderService.AddOrder(order.Id, order);
 
-            Order updatedOrder = new Order(5, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order updatedOrder = new Order(5, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
             _orderService.UpdateOrder(order.Id, updatedOrder);
 
             Order retrievedOrder = _orderService.GetOrderById(order.Id);
@@ -107,7 +125,7 @@ namespace ShoppingTestCase
         [Test]
         public void UpdateOrderFailTest()
         {
-            Order order = new Order(999, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(999, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
 
             Assert.Throws<IdNotFoundException>(() =>
             {
@@ -118,7 +136,7 @@ namespace ShoppingTestCase
         [Test]
         public void DeleteOrderSuccessTest()
         {
-            Order order = new Order(6, new List<Product>(), DateTime.Now, Currency.Rupee, 0);
+            Order order = new Order(6, new List<OrderedProduct>(), DateTime.Now, Currency.Rupee, 0);
             _orderService.AddOrder(order.Id, order);
 
             _orderService.DeleteOrder(order.Id);

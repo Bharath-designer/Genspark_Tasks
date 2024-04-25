@@ -4,6 +4,10 @@ using ShoppingModelLibrary;
 
 namespace ShoppingBLLibrary
 {
+    public class QuantityExceededException: Exception
+    {
+        public QuantityExceededException(string msg): base(msg) { }
+    }
     public class OrderBL: IOrderService
     {
         IRepository<int, Order> _repository;
@@ -15,6 +19,13 @@ namespace ShoppingBLLibrary
 
         public void AddOrder(int id, Order order)
         {
+            foreach (OrderedProduct product in order.Products)
+            {
+                if (product.Quantity > 5)
+                {
+                    throw new QuantityExceededException("Quantity should not exceed 5");
+                }
+            }
             double orderValue = CalculateOrderValue(order);
 
             if (orderValue < 100)
@@ -37,7 +48,7 @@ namespace ShoppingBLLibrary
             double orderValue = 0;
             foreach (var product in order.Products)
             {
-                orderValue += product.Price;
+                orderValue += product.TotalAmount;
             }
             return orderValue;
         }
