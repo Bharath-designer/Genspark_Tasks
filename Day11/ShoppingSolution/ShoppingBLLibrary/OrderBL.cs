@@ -36,7 +36,7 @@ namespace ShoppingBLLibrary
             {
                 orderValue += 100;
             }
-            else if (order.Product.Quantity == 3 && orderValue >= 1500)
+            else if (order.Product.Quantity >= 3 && orderValue >= 1500)
             {
                 orderValue *= 0.95;
             }

@@ -41,7 +41,11 @@ namespace ShoppingBLLibrary
 
         public Cart GetCartById(int cartId)
         {
-            return _repository.GetById(cartId);
+            Cart cart = _repository.GetById(cartId);
+
+            if (cart == null)
+                throw new IdNotFoundException("Id not found");
+            else return cart;
         }
 
         public void UpdateCart(int cartId, Cart cart)
