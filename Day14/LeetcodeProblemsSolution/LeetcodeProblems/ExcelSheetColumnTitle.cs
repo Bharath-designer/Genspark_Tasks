@@ -6,7 +6,7 @@ namespace LeetcodeProblems
 {
     public class ExcelSheetColumnTitle
     {
-        string alphabets = "0ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         public string Solution(int columnNumber) 
         {
