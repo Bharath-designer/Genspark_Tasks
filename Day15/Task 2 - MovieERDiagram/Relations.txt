@@ -1,0 +1,6 @@
+Movie - Movie Format (M:1)
+Movie - Movie Category (M:1)
+Store - Member (1:M)
+Member - Member Type (M:1)
+Member - Dependent (1:M)
+Dependent - Movie (M:1)

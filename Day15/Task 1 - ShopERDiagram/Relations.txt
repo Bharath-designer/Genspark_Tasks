@@ -1,0 +1,5 @@
+Products (One) to Supplier (Many) - One product can have multiple suppliers.
+Suppliers (One) to Product (Many) - One supplier can supply multiple products.
+Customers (One) to Purchases (Many) - One customer can make multiple purchases.
+Purchases (One) to PurchaseItems (Many) - One purchase can have multiple items.
+Purchases (One) to Bills (One) - Each purchase will have exactly one bill.
