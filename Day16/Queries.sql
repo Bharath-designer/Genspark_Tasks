@@ -26,7 +26,8 @@ select * from titles order by pub_id desc, type asc, price desc;
 select type,avg(price) as Average_Price from titles group by type;
  
 -- 10) print all the types in uniques
- 
+select distinct type from titles;
+
 -- 11) Print the first 2 costliest books
 select top 2 * from titles order by price desc;
 
