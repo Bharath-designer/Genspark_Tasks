@@ -53,7 +53,7 @@ namespace DoctorClinicApp.Controllers
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
                 var customErrorResponse = new
                 {
-                    Status = 401,
+                    Status = 400,
                     Title = "One or more validation errors occurred.",
                     Errors = errors
                 };
