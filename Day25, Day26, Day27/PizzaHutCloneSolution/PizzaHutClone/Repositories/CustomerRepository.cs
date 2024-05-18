@@ -25,7 +25,16 @@ namespace PizzaHutClone.Repositories
             Customer? customer = await _context.Customers.FindAsync(id);
             return customer;
         }
-        
+
+        public async Task<Customer?> GetByIdWithUser(int customerId)
+        {
+            Customer? customer = await _context.Customers
+                                   .Include(c => c.User)
+                                   .FirstOrDefaultAsync(c => c.CustomerId == customerId);
+
+            return customer;
+        }
+
         public async Task<Customer?> GetByEmailWithUser(string email)
         {
             Customer? customer = await _context.Customers

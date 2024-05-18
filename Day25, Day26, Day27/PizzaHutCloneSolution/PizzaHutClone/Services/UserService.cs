@@ -85,7 +85,8 @@ namespace PizzaHutClone.Services
 
             User user = new User
             {
-                Status = "ACTIVE",
+                Status = "DISABLED",
+                Roles = "USER",
                 PasswordHashKey = hMACSHA.Key,
                 HashedPassword = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userRegisterDTO.Password))
             };

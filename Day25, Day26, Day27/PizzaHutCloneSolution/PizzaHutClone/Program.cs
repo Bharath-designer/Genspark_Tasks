@@ -22,7 +22,7 @@ namespace PizzaHutClone
 
             builder.Services.AddControllers(options =>
             {
-                //options.Filters.Add(new AuthorizeFilter());
+                options.Filters.Add(new AuthorizeFilter());
             })
                 .ConfigureApiBehaviorOptions(options =>
                 options.SuppressModelStateInvalidFilter = true
@@ -52,6 +52,7 @@ namespace PizzaHutClone
             builder.Services.AddScoped(typeof(UserService));
             builder.Services.AddScoped(typeof(TokenService));
             builder.Services.AddScoped(typeof(PizzaService));
+            builder.Services.AddScoped(typeof(AdminService));
 
             builder.Services.AddScoped(typeof(IRepository<User, int>), typeof(UserRepository));
             builder.Services.AddScoped(typeof(IRepository<Customer, int>), typeof(CustomerRepository));
@@ -65,11 +66,13 @@ namespace PizzaHutClone
                 app.UseSwaggerUI();
             }
 
-
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.MapControllers();
 
             app.Run();
         }
+
     }
 }

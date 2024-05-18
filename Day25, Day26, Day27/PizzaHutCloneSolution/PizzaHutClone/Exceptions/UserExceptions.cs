@@ -14,4 +14,9 @@
     {
         public UnauthorizedUserException() : base("Invalid username or password") { }
     }
+
+    public class UserNotPopulatedInCustomerException: Exception
+    {
+        public UserNotPopulatedInCustomerException() : base("User is not populated in Customer. User is NULL") { }
+    }
 }

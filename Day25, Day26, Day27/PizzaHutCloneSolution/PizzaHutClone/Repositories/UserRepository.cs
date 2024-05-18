@@ -25,6 +25,8 @@ namespace PizzaHutClone.Repositories
         {
             User? user = await _context.Users.FindAsync(id);
             return user;
+
+
         }
 
         public async Task<User> Add(User entity)

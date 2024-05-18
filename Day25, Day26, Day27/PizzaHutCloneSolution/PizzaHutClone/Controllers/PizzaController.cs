@@ -7,7 +7,7 @@ using PizzaHutClone.Services;
 namespace PizzaHutClone.Controllers
 {
     [ApiController]
-    [Route("pizza")]
+    [Route("api/pizza")]
     public class PizzaController : ControllerBase
     {
         private readonly PizzaService _service;
@@ -51,10 +51,10 @@ namespace PizzaHutClone.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpPost]
         public async Task<IActionResult> AddPizza([FromBody] AddPizzaDTO pizzaDTO )
         {
-            await Console.Out.WriteLineAsync(pizzaDTO == null ? pizzaDTO.ToString() : $"{pizzaDTO.Name}, {pizzaDTO.PriceInRupees}");
             try
             {
                 if (!ModelState.IsValid)

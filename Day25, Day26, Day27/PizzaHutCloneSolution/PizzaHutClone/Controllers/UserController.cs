@@ -7,6 +7,7 @@ using PizzaHutClone.Services;
 
 namespace PizzaHutClone.Controllers
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("api/auth")]
     public class UserController : ControllerBase
@@ -18,7 +19,6 @@ namespace PizzaHutClone.Controllers
             this._userService = _userService;
         }
 
-        [AllowAnonymous]
         [Route("register")]
         [HttpPost]
         public async Task<IActionResult> Register([FromBody] RegisterDTO userRegisterDTO)
@@ -55,7 +55,6 @@ namespace PizzaHutClone.Controllers
 
         }
         
-        [AllowAnonymous]
         [Route("login")]
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
