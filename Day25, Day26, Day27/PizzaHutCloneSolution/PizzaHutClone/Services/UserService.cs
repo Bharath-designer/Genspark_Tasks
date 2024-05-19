@@ -11,11 +11,11 @@ namespace PizzaHutClone.Services
 {
     public class UserService
     {
-        private readonly IRepository<Customer, int> _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
         private readonly IRepository<User, int> _userRepository;
         private readonly TokenService _tokenService;
 
-        public UserService(IRepository<User, int> userRepo, IRepository<Customer, int> customerRepo, TokenService tokenService)
+        public UserService(IRepository<User, int> userRepo, ICustomerRepository customerRepo, TokenService tokenService)
         {
             _customerRepository = customerRepo;
             _userRepository = userRepo;
@@ -26,7 +26,7 @@ namespace PizzaHutClone.Services
         public async Task RegisterUser(RegisterDTO userRegisterDTO)
         {
             Customer? existingCustomer =
-                await ((CustomerRepository)_customerRepository).GetByEmailWithUser(userRegisterDTO.Email);
+                await _customerRepository.GetByEmailWithUser(userRegisterDTO.Email);
             if (existingCustomer != null)
             {
                 throw new UserEmailAlreadyRegisteredException();
@@ -40,7 +40,7 @@ namespace PizzaHutClone.Services
         public async Task<LoginReturnDTO> Login(LoginDTO userLoginDTO)
         {
             Customer? storedCustomer =
-                await ((CustomerRepository)_customerRepository).GetByEmailWithUser(userLoginDTO.Email);
+                await _customerRepository.GetByEmailWithUser(userLoginDTO.Email);
 
 
             if (storedCustomer == null) throw new UnauthorizedUserException();
@@ -86,7 +86,7 @@ namespace PizzaHutClone.Services
             User user = new User
             {
                 Status = "DISABLED",
-                Roles = "USER",
+                Roles = "SELLER",
                 PasswordHashKey = hMACSHA.Key,
                 HashedPassword = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userRegisterDTO.Password))
             };

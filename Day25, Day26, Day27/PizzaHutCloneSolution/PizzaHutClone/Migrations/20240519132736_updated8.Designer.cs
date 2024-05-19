@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzaHutClone.Context;
 
@@ -10,9 +11,11 @@ using PizzaHutClone.Context;
 namespace PizzaHutClone.Migrations
 {
     [DbContext(typeof(PizzaHutCloneContext))]
-    partial class PizzaHutCloneContextModelSnapshot : ModelSnapshot
+    [Migration("20240519132736_updated8")]
+    partial class updated8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

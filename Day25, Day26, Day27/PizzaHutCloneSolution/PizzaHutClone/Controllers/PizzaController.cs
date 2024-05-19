@@ -51,7 +51,7 @@ namespace PizzaHutClone.Controllers
             }
         }
 
-        [Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "SELLER")]
         [HttpPost]
         public async Task<IActionResult> AddPizza([FromBody] AddPizzaDTO pizzaDTO )
         {

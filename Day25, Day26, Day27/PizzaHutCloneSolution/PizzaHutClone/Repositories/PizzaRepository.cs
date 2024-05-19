@@ -6,7 +6,7 @@ using PizzaHutClone.Models;
 
 namespace PizzaHutClone.Repositories
 {
-    public class PizzaRepository : IRepository<Pizza, int>
+    public class PizzaRepository : IPizzaRepository
     {
         private readonly PizzaHutCloneContext _context;
 
@@ -24,6 +24,12 @@ namespace PizzaHutClone.Repositories
         public async Task<Pizza?> GetById(int id)
         {
             Pizza? pizza = await _context.Pizzas.FindAsync(id);
+            return pizza;
+        }
+
+        public async Task<List<Pizza>> GetAllBySellerId(int id)
+        {
+            List<Pizza> pizza = await _context.Pizzas.Where(p => p.SellerId == id).ToListAsync();
             return pizza;
         }
 

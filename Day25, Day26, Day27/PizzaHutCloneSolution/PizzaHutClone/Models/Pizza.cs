@@ -10,5 +10,7 @@ namespace PizzaHutClone.Models
         public string Name { get; set; }
         public double PriceInRupees { get; set; }
         public bool InStock { get; set; }
+        public int SellerId { get; set; }
+        public Customer Customer { get; set; }
     }
 }

@@ -6,9 +6,9 @@ namespace PizzaHutClone.Services
 {
     public class CustomerService
     {
-        private readonly IRepository<Customer, int> _repository;
+        private readonly ICustomerRepository _repository;
 
-        public CustomerService(IRepository<Customer,int> _repo) {
+        public CustomerService(ICustomerRepository _repo) {
             _repository = _repo;
         }
 

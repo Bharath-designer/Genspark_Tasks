@@ -8,11 +8,12 @@ namespace PizzaHutClone.Controllers
     [Route("api/admin")]
     [ApiController]
     [Authorize(Roles = "ADMIN")]
-    public class AdminController: ControllerBase
+    public class AdminController : ControllerBase
     {
         private readonly AdminService _adminService;
 
-        public AdminController(AdminService adminService) { 
+        public AdminController(AdminService adminService)
+        {
             _adminService = adminService;
         }
 
@@ -24,8 +25,8 @@ namespace PizzaHutClone.Controllers
             {
                 await _adminService.ActivateCustomer(id);
                 return Ok($"Customer with the Id '{id}' have been Activated!");
-            } 
-            catch(NoCustomerFoundException ex)
+            }
+            catch (NoCustomerFoundException ex)
             {
                 return NotFound(ex.Message);
             }

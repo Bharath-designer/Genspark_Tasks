@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzaHutClone.Context;
 
@@ -10,9 +11,11 @@ using PizzaHutClone.Context;
 namespace PizzaHutClone.Migrations
 {
     [DbContext(typeof(PizzaHutCloneContext))]
-    partial class PizzaHutCloneContextModelSnapshot : ModelSnapshot
+    [Migration("20240519132305_updated7")]
+    partial class updated7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,6 +63,9 @@ namespace PizzaHutClone.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PizzaId"));
 
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
                     b.Property<bool>("InStock")
                         .HasColumnType("bit");
 
@@ -70,12 +76,7 @@ namespace PizzaHutClone.Migrations
                     b.Property<double>("PriceInRupees")
                         .HasColumnType("float");
 
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
-
                     b.HasKey("PizzaId");
-
-                    b.HasIndex("SellerId");
 
                     b.ToTable("Pizzas");
                 });
@@ -118,17 +119,6 @@ namespace PizzaHutClone.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("PizzaHutClone.Models.Pizza", b =>
-                {
-                    b.HasOne("PizzaHutClone.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("SellerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("PizzaHutClone.Models.User", b =>

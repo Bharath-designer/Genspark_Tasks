@@ -49,14 +49,17 @@ namespace PizzaHutClone
             );
             #endregion
 
+
             builder.Services.AddScoped(typeof(UserService));
             builder.Services.AddScoped(typeof(TokenService));
             builder.Services.AddScoped(typeof(PizzaService));
             builder.Services.AddScoped(typeof(AdminService));
 
             builder.Services.AddScoped(typeof(IRepository<User, int>), typeof(UserRepository));
-            builder.Services.AddScoped(typeof(IRepository<Customer, int>), typeof(CustomerRepository));
-            builder.Services.AddScoped(typeof(IRepository<Pizza, int>), typeof(PizzaRepository));
+            builder.Services.AddScoped(typeof(ICustomerRepository), typeof(CustomerRepository));
+            builder.Services.AddScoped(typeof(IPizzaRepository), typeof(PizzaRepository));
+
+            builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
 

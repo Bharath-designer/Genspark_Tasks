@@ -27,6 +27,13 @@ namespace PizzaHutClone.Context
                 .HasForeignKey<Customer>(c => c.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Pizza>()
+                .HasOne(p=>p.Customer)
+                .WithMany()
+                .HasForeignKey(p=>p.SellerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
             base.OnModelCreating(modelBuilder);
         }
 
