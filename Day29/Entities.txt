@@ -1,8 +1,6 @@
-# Event Management Portal
+Entities
 
-## Entities
-
-**Event**
+Event
 - EventId
 - Title
 - Description
@@ -15,7 +13,7 @@
 - TicketTypes[]
 - Tickets[]
 
-**TicketType**
+TicketType
 - TicketTypeId
 - TicketType
 - Description
@@ -26,7 +24,7 @@
 - Event
 - Tickets[]
 
-**Ticket**
+Ticket
 - TicketId
 - BookedPrice
 - EventId(FK)
@@ -36,12 +34,12 @@
 - TicketType
 - Order
 
-**UserCredential**
+UserCredential
 - UserCredentialID
 - HashedPassword
 - PasswordHashKey
 
-**Organizer**
+Organizer
 - OrganizerId
 - OrganizationName
 - Email
@@ -49,7 +47,7 @@
 - UserCredential
 - Events[]
 
-**Attendee**
+Attendee
 - AttendeeId
 - Name
 - Email
@@ -57,7 +55,7 @@
 - UserCredential
 - Orders[]
 
-**Order**
+Order
 - OrderId
 - OrderDate
 - AttendeeId
