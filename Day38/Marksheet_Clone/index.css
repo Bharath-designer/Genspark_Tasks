@@ -1,0 +1,240 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    font-family: poppins;
+    padding: 2em 1em;
+}
+
+.marksheet-container {
+    background: white;
+    width: 48em;
+    padding: 1em;
+}
+
+
+.marksheet {
+    border: .35em double #EE4E4E;
+    padding: 1em;
+}
+
+.marksheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.marksheet-header .col-1 {
+    width: 4em;
+    display: flex;
+}
+
+.qr-code {
+    width: 100%;
+}
+
+.marksheet-header .col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+
+.marksheet-header .col-2 .logo-row{
+    display: flex;
+    width: 6em;
+}
+
+.marksheet-header .col-2 .logo-row img{
+    width: 100%;
+}
+
+.marksheet-header .col-2 .title-row{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #0E46A3;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: .5em;
+}
+.marksheet-header .col-2 .statement-marks{
+    margin-top: 1em;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+    font-size: .875em;
+}
+.marksheet-header .col-2 .designation{
+    font-size: .875em;
+    color: #0E46A3;
+    font-weight: 600;
+}
+
+.marksheet-header .col-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .5em;
+}
+
+.marksheet-header .col-3  .serial-number{
+    font-size: .85em;
+}
+
+.marksheet-header .col-3 .profile-avatar {
+    display: flex;
+    width: 4em;
+}
+
+.marksheet-header .col-3 .profile-avatar .avatar{
+    width: 100%;
+}
+
+.meta-data-container {
+    width: 95%;
+    margin: auto;
+    margin-top: 1em;
+    display: flex;    
+    justify-content: space-between;
+    font-size: .875em;
+    margin-bottom: 1em;
+}
+
+.meta-data-row {
+    display: flex;
+    gap: .5em;
+}
+
+.meta-data-container .label {
+    font-weight: 600;
+}
+
+.marks-table-container {
+    position: relative;
+}
+
+.marks-table-container .background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    opacity: .15;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: difference;
+}
+
+.marks-table-container .background-logo img{
+    width: 100%;
+}
+
+.semester-table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: auto;
+    font-size: .85em;
+}
+
+.semester-table .semester-title {
+    font-weight: 500;
+    padding: .5em;
+    background: #fbe7df;
+}
+
+.semester-table thead th {
+    background: #e52b19;
+    color: white;
+    font-weight: 500;
+    padding: .1em .35em;
+    z-index: 1;
+}
+
+.semester-table .border-all {
+    border: 1px solid black;
+}
+
+.semester-table td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: .1em 1em;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.semester-table .t-align-start {
+    text-align: start;
+}
+
+.visibility-none {
+    visibility: hidden;
+}
+
+.result-container {
+    width: 95%;
+    margin: .875em auto;
+    font-size: 0.875em;
+    font-weight: 600;
+
+}
+
+.grand-total-table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: .85em;
+}
+
+.grand-total-table .heading {
+    font-weight: 500;
+}
+
+.grand-total-table .t-align-start {
+    text-align: start;
+}
+
+.grand-total-table td {
+    border: 1px solid black;
+    padding: .1em 1em;
+    text-align: center;
+
+}
+
+.data-place {
+    display: flex;
+    flex-direction: column;
+}
+
+.marksheet-footer {
+    font-weight: 500;
+    width: 95%;
+    margin: auto;
+    margin-top: 2em;
+    font-size: .875em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exam-controller {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.certification-number {
+    margin-top: 1em;
+    text-align: center;
+    font-weight: 500;
+    font-size: .875em;
+    font-family: cursive;
+}
