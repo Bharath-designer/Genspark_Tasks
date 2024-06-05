@@ -1,0 +1,91 @@
+.swipe-right-animation {
+    animation: swipe-right-animation 1s ease forwards;
+    animation-delay: 1s;
+    position: relative;
+    left: -15vw;
+    opacity: 0;
+}
+
+@keyframes swipe-right-animation {
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.swipe-left-animation {
+    animation: swipe-left-animation 1s ease forwards;
+    animation-delay: 1s;
+    position: relative;
+    left: 15vw;
+    opacity: 0;
+}
+
+@keyframes swipe-left-animation {
+    from {
+        
+    }
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+
+.swipe-up-animation {
+    animation: swipe-up-animation 1s ease forwards;
+    animation-delay: .5s;
+    position: relative;
+    top: 30vh;
+    opacity: 0;
+}
+
+@keyframes swipe-up-animation {
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+.swipe-down-animation {
+    animation: swipe-down-animation .6s ease forwards;
+    position: relative;
+    top: -10vh;
+    opacity: 0;
+}
+
+@keyframes swipe-down-animation {
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+.fade-in-animation {
+    animation: fade-in-animation 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes fade-in-animation {
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
