@@ -1,0 +1,21 @@
+
+.product-table {
+    width: 100%;
+    text-align: center;
+}
+
+.product-img {
+    width: 10em;
+}
+
+.product-table {
+    border-collapse: collapse;
+}
+
+.product-table th {
+    padding: .5em;
+}
+
+.product-table td, .product-table th {
+    border: 1px solid black;
+}

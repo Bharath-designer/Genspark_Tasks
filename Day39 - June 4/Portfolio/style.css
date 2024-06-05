@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    --primary-color: #FF6500;
+    font-family: poppins;
+    color: white;
+    font-size: .9em;
+    scroll-behavior: smooth;
+}
+
+.name-container {
+    text-align: center;
+    background: #212121;
+    padding: 1em;
+    color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.main-container {
+    display: flex;
+    gap: 2em;
+    width: 90%;
+    margin: auto;
+    padding: 4em 2em;
+}
+
+.main-container .left {
+    flex: 2;
+    color: rgb(158, 156, 156);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-container .left .designation {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.main-container .left .about {
+    width: min(50em, 90%);
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.8em;
+}
+.main-container .right {
+    flex: 1.1;
+}
+
+.contact-links {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+.contact-links a {
+    border: 1px solid #4793AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    width: 2.7em;
+    height: auto;
+    border-radius: .15em;
+    text-decoration: none;
+    outline: none;
+    transition: .5s;
+    color: white;
+}
+.contact-links a:hover {
+    border: transparent;
+    background: #4793AF;
+}
+.contact-links i {
+    font-size: 1.6em;
+}
+
+.more-about {
+    margin-top: 2em;
+    border: 1px solid;
+    width: fit-content;
+    padding: .3em 1em;
+    font-size: .9em;
+    border-radius: .125em;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    transition: .3s;
+}
+.more-about:hover {
+    border-color: var(--primary-color);
+
+}
+.more-about i{
+    font-size: 1.5em;
+    height: fit-content;
+    position: relative;
+    top: 1px;
+}
+
+.main-container-separator {
+    height: 1px;
+    background-color: rgb(52, 52, 52);
+}
