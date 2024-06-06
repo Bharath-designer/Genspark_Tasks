@@ -1,0 +1,170 @@
+{
+    "emails": [
+        {
+            "username": "Fortune Company co.",
+            "profileImg": "https://www.profilebakery.com/wp-content/uploads/2023/04/PROFILE-WHATSAPP-DP.jpg",
+            "subject": "Important Files!",
+            "body": "Make sure you receive these",
+            "attachments": [
+                {
+                    "filename": "Pre-order.pdf",
+                    "filetype": "application/pdf",
+                    "size": 22456040
+                }
+            ],
+            "emailTime": "11:27 pm",
+            "isStared": true,
+            "isRead": true
+        },
+        {
+            "username": "Stephanie Everhill",
+            "profileImg": null,
+            "subject": "When do we meet again?",
+            "body": "I would meet at the Western Mall if you",
+            "attachments": [],
+            "emailTime": "11:27 pm",
+            "isStared": false,
+            "isRead": false
+        },
+        {
+            "username": "Random Bank Online",
+            "profileImg": null,
+            "subject": "Random Bank Account Balance Update",
+            "body": "Time to check your bank information.",
+            "attachments": [
+                {
+                    "filename": "example.png",
+                    "filetype": "image/png",
+                    "size": 224760
+                },
+                {
+                    "filename": "test.png",
+                    "filetype": "image/png",
+                    "size": 224760
+                },
+                {
+                    "filename": "final.pdf",
+                    "filetype": "application/pdf",
+                    "size": 224760
+                }
+            ],
+            "emailTime": "June 18",
+            "isStared": false,
+            "isRead": true
+        },
+        {
+            "username": "Taylor Grey",
+            "profileImg": null,
+            "subject": "Timesheet nextweek?",
+            "body": "Hey what was our timesheet that was for",
+            "attachments": [],
+            "emailTime": "June 14",
+            "isStared": true,
+            "isRead": false
+        },
+        {
+            "username": "UniqueYou by SecretKissShop",
+            "profileImg": null,
+            "subject": "Learn new Tricks",
+            "body": "Now is great time to shop great things",
+            "attachments": [],
+            "emailTime": "June 12",
+            "isStared": true,
+            "isRead": true
+        },
+        {
+            "username": "John Doe",
+            "profileImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp",
+            "subject": "Project Update",
+            "body": "The project is on track, but we need to complete the final review by end of the week.",
+            "attachments": [],
+            "emailTime": "June 11",
+            "isStared": false,
+            "isRead": false
+        },
+        {
+            "username": "Marketing Team",
+            "profileImg": null,
+            "subject": "New Campaign Ideas",
+            "body": "We have brainstormed several new ideas for the upcoming campaign.",
+            "attachments": [
+                {
+                    "filename": "Campaign_Concepts.pdf",
+                    "filetype": "application/pdf",
+                    "size": 512000
+                }
+            ],
+            "emailTime": "June 11",
+            "isStared": true,
+            "isRead": false
+        },
+        {
+            "username": "HR Department",
+            "profileImg": "https://www.profilebakery.com/wp-content/uploads/2023/04/PROFILE-WHATSAPP-DP.jpg",
+            "subject": "Policy Update",
+            "body": "Please review the attached document for the latest updates on company policies.",
+            "attachments": [
+                {
+                    "filename": "Policy_Update.pdf",
+                    "filetype": "application/pdf",
+                    "size": 1056000
+                }
+            ],
+            "emailTime": "June 11",
+            "isStared": false,
+            "isRead": false
+        },
+        {
+            "username": "Emily Clarkson",
+            "profileImg": null,
+            "subject": "Dinner Plans",
+            "body": "Let's meet at the new Italian restaurant at 7 PM.",
+            "attachments": [],
+            "emailTime": "June 11",
+            "isStared": false,
+            "isRead": true
+        },
+        {
+            "username": "Tech Support",
+            "profileImg": "https://marketplace.canva.com/EAFUNDQbde4/1/0/1600w/canva-black%2C-purple-and-cyan%2C-neon-circular-frame-instagram-profile-picture-gZktCruhDCM.jpg",
+            "subject": "System Maintenance",
+            "body": "There will be scheduled system maintenance this Friday from 10 PM to 2 AM.",
+            "attachments": [],
+            "emailTime": "June 11",
+            "isStared": true,
+            "isRead": false
+        },
+        {
+            "username": "Finance Department",
+            "profileImg": null,
+            "subject": "Budget Report",
+            "body": "The Q2 budget report is attached. Please review it before the meeting.",
+            "attachments": [
+                {
+                    "filename": "Q2_Budget_Report.pdf",
+                    "filetype": "application/pdf",
+                    "size": 204800
+                }
+            ],
+            "emailTime": "June 10",
+            "isStared": true,
+            "isRead": true
+        },
+        {
+            "username": "Travel Agency",
+            "profileImg": "https://i.pinimg.com/236x/d0/5a/80/d05a806c3d07c3f685e9715ec5584f09.jpg",
+            "subject": "Booking Confirmation",
+            "body": "Your flight tickets have been booked. Please find the details attached.",
+            "attachments": [
+                {
+                    "filename": "Booking_Confirmation.pdf",
+                    "filetype": "application/pdf",
+                    "size": 320000
+                }
+            ],
+            "emailTime": "June 10",
+            "isStared": false,
+            "isRead": false
+        }
+    ]
+}

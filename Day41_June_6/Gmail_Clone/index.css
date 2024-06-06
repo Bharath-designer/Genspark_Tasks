@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100svh;
+    background: black;
+    overflow: hidden;
+    font-family: sans-serif;
+    /* font-size: .875em; */
+}
+
+.mobile-frame::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-frame {
+    width: 30em;
+    height: 100%;
+    overflow: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top-bar {
+    background: #f7f8fc;
+    border-radius: 50em;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: .3em 1em;
+    margin-top: .5em;
+    gap: 1em;
+}
+
+.top-bar .user-profile-icon {
+    overflow: hidden;
+    width: 2.5em;
+    margin-left: auto;
+}
+
+.top-bar .user-profile-icon img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-bar .search-text {
+    color: #333333;
+}
+
+.footer {
+    display: flex;
+    background: #f7f8fc;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+.footer-icon {
+    display: flex;
+    padding: .6em 2em;
+    border-radius: 50em;
+}
+
+.footer-icon.active {
+    background: #CEEAFE;
+
+}
+
+.footer-icon img {
+    width: 1.5em;
+}
+
+
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-content {
+    flex: 1;
+    overflow: auto;
+    width: 95%;
+    margin: auto;
+}
+
+.section-label {
+    color: #4F4F4F;
+    margin: .5em 0;
+    font-size: .9em;
+}
+
+.social-row {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 1em;
+    padding: .5em;
+}
+
+.social-row .social-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.social-row .social-content .social-title {
+    font-weight: 600;
+}
+
+.social-row .social-content .social-text {
+    font-size: .875em;
+    color: #606267;
+}
+
+.social-content .social-icon-container {
+    display: flex;
+}
+
+.social-row .social-icon-container img {
+    width: 1.5em;
+}
+
+.social-row .number-label {
+    font-size: .8em;
+    background: #1A73E9;
+    padding: .4em .7em;
+    color: white;
+    border-radius: 50em;
+}
+
+.social-row.promotion .number-label {
+    background: #45BF6B;
+}
