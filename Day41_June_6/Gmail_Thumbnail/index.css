@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100svh;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'open sans';
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+.body-bg {
+    position: fixed;
+    inset: 0;
+    background: #2F80ED;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: -999;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+    overflow: auto;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* .column.col-1 {}
+
+.column.col-2 {} */
+
+.col-1-content {
+    width: min(20em, 90%);
+    margin-top: 5vh;
+}
+
+.col-1-content .title {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #2F80ED;
+}
+
+.col-1-content .title .black {
+    color: black;
+    font-weight: 600;
+}
+
+.col-1-content .title .extra-bold {
+    font-weight: 900;
+}
+
+.col-1-content .list {
+    margin-top: 1.2em;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-left: 1em;
+}
+
+/* .col-1-content .list .list-item {} */
+
+.mobile-container {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    height: 85%;
+    max-height: 31em;
+    background: white;
+    position: relative;
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.311);
+}
+
+.mobile .mail-open {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    top: -2em;
+    right: -2em;
+    z-index: -999;
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.311);
+}
+
+.mobile .mail-open img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.mobile.android {
+    top: 10%;
+}
+
+.mobile.iphone {
+    top: -5%;
+}
+
+.mobile .mobile-top-bar {
+    display: flex;
+}
+
+.mobile .mobile-top-bar img {
+    width: 100%;
+}
+
+.mobile .mobile-iframe-content {
+    flex: 1;
+}
+
+.mobile .mobile-iframe-content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (width < 1000px) {
+    .mobile {
+        height: 80%;
+    }
+
+    .mobile .mail-open {
+        top: -1em;
+        right: -1em;
+    }
+
+    .mobile-container {
+        gap: 2em;
+    }
+
+    .col-1-content .title {
+        font-size: 1.8em;
+    }
+
+    .col-1-content .list {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (width < 800px) {
+
+    .mobile .mail-open {
+        top: -2em;
+        right: -2em;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 5em;
+    }
+
+    .col-1-content {
+        margin-top: 0;
+    }
+
+    .mobile-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 5em;
+        padding-bottom: 3em;
+    }
+
+    .mobile {
+        min-height: 34em;
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: min(95%,18em);
+    }
+
+
+}
