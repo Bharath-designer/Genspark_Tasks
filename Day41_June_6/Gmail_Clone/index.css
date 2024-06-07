@@ -19,7 +19,7 @@ body {
     background: black;
     overflow: hidden;
     font-family: sans-serif;
-    font-size: .7em;
+    font-size: .6em;
 }
 
 .mobile-frame::-webkit-scrollbar {
