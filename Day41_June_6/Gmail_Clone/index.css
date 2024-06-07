@@ -19,7 +19,7 @@ body {
     background: black;
     overflow: hidden;
     font-family: sans-serif;
-    font-size: .8em;  
+    font-size: .7em;
 }
 
 .mobile-frame::-webkit-scrollbar {
@@ -148,4 +148,11 @@ body {
 
 .social-row.promotion .number-label {
     background: #45BF6B;
+}
+
+
+@media screen and (width < 600px) {
+    body {
+        font-size: .9em;
+    }
 }
