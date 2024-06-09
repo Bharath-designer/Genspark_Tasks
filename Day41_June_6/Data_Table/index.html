@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="table-container">
+
+        <div class="table-wrapper">
+            <header class="table-header">
+                <div class="header-left">
+                    <div class="filter-container">
+                        <div class="filter-icon">
+                            <img src="assets/filter-icon.svg" alt="">
+                        </div>
+                        <div class="search-container">
+                            <img src="assets/search-icon.svg" alt="">
+                            <input placeholder="Search" type="text" class="search-input">
+                        </div>
+                    </div>
+                    <div style="display: none;"  class="selected-options-container">
+                        <div class="selected-data">
+                            <span id="no-selected">4</span> selected
+                        </div>
+                        <div class="de-select-icon">
+                            <img src="assets/delete-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="add-cust-btn">
+                        <span>
+                            <img src="assets/add.svg" alt="">
+                        </span>
+                        <span>Add customer</span>
+                    </button>
+                </div>
+            </header>
+            <div class="table-content">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" name="" id=""></th>
+                            <th>#</th>
+                            <th>NAME</th>
+                            <th>DESCRIPTION</th>
+                            <th>STATUS</th>
+                            <th>RATE</th>
+                            <th>BALANCE</th>
+                            <th>DEPOSIT</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>1</td>
+                        <td>
+                            <div class="name">Ann Culhane</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>2</td>
+                        <td>
+                            <div class="name">Ahmad Rosser</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card paid">Paid</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>3</td>
+                        <td>
+                            <div class="name">Zain Calzoni</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$20.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>4</td>
+                        <td>
+                            <div class="name">Leo Stanton</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card inactive">Inactive</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">+$670.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>5</td>
+                        <td>
+                            <div class="name">Kaiya Vetrovs</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$350.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>6</td>
+                        <td>
+                            <div class="name">Ann Culhane</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>7</td>
+                        <td>
+                            <div class="name">Ahmad Rosser</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card paid">Paid</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>8</td>
+                        <td>
+                            <div class="name">Zain Calzoni</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$20.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>9</td>
+                        <td>
+                            <div class="name">Leo Stanton</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card inactive">Inactive</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">+$670.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>10</td>
+                        <td>
+                            <div class="name">Kaiya Vetrovs</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$350.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>11</td>
+                        <td>
+                            <div class="name">Ann Culhane</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>12</td>
+                        <td>
+                            <div class="name">Ahmad Rosser</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card paid">Paid</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>13</td>
+                        <td>
+                            <div class="name">Zain Calzoni</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$20.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>14</td>
+                        <td>
+                            <div class="name">Leo Stanton</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card inactive">Inactive</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">+$670.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>15</td>
+                        <td>
+                            <div class="name">Kaiya Vetrovs</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$350.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>16</td>
+                        <td>
+                            <div class="name">Ann Culhane</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>17</td>
+                        <td>
+                            <div class="name">Ahmad Rosser</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card paid">Paid</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">$270.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>18</td>
+                        <td>
+                            <div class="name">Zain Calzoni</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$20.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>19</td>
+                        <td>
+                            <div class="name">Leo Stanton</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card inactive">Inactive</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td gain">+$670.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>20</td>
+                        <td>
+                            <div class="name">Kaiya Vetrovs</div>
+                            <div class="id">73486273974</div>
+                        </td>
+                        <td  class="desc-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptates natus eligendi doloremque odio inventore, illum illo vitae saepe dolore?</td>
+                        <td>
+                            <span class="status-card open">Open</span>
+                        </td>
+                        <td>
+                            <div class="primary-td">$70.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td loss">-$350.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                        <td>
+                            <div class="primary-td">$500.00</div>
+                            <div class="secondary-td">CAD</div>
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

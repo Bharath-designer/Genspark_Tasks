@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100svh;
+    height: 100vh;
+    overflow: hidden;
+    padding: 2em 0;
+    font-family: inter;
+}
+
+.table-container {
+    height: 100%;
+    width: min(70em, 90%);
+    overflow: hidden;
+}
+
+
+.table-wrapper {
+    height: 100%;
+    border: 2px solid #e7eaef;
+    border-radius: .5em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #f7f9fd;
+}
+
+
+.table-header {
+    display: flex;
+    padding: .5em 1em;
+    background: #f7f9fd;
+    position: sticky;
+}
+
+.table-header .header-left {
+    flex: 1;
+    display: flex;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1em;
+}
+
+.filter-icon {
+    display: flex;
+    padding: .5em 1em;
+    border: 1px solid #c3c7cd;
+    border-radius: .4em;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-icon img {
+    width: .9em;
+
+}
+
+.filter-container .search-container {
+    display: flex;
+    gap: 1em;
+    border: 1px solid #c3c7cd;
+    padding: 0 1em;
+    border-radius: .4em;
+    background: white;
+}
+
+.filter-container .search-container img {
+    width: 1.2em;
+}
+
+.filter-container .search-input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.selected-options-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.selected-data {
+    color: #464F60;
+    font-size: .9em;
+}
+
+.de-select-icon {
+    padding: .5em;
+    border: 1px solid #c3c7cd;
+    display: flex;
+    border-radius: .4em;
+    cursor: pointer;
+    background: white;
+}
+
+.de-select-icon img {
+    width: 1em;
+}
+
+.header-right {
+    display: flex;
+}
+
+.add-cust-btn {
+    background: #2264E5;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    gap: .5em;
+    padding: 0 1em;
+    border-radius: .4em;
+    cursor: pointer;
+}
+
+.add-cust-btn span {
+    display: flex;
+}
+
+.add-cust-btn span img {
+    width: 1em;
+}
+
+.table-content {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+}
+
+
+.table-content table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .875em;
+}
+
+.table-content thead {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #E9EDF5;
+}
+
+.table-content thead th,
+.table-content tbody td {
+    padding: .8em;
+    text-align: start;
+}
+
+.table-content thead th {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-weight: 600;
+    color: #464F60;
+}
+
+.table-content tbody td {
+    color: #2E3B52;
+    font-size: .95em;
+}
+
+.table-content thead tr {}
+
+.table-content .desc-td {
+    max-width: 15em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+.table-content tbody tr {
+    background: white;
+}
+
+.table-content tbody tr:nth-child(2n+1) {
+    background: #f7f9ff;
+}
+
+.table-content tbody td .name {
+    font-weight: 600;
+    color: #171C26;
+}
+
+.table-content tbody td .id {
+    color: #687182;
+    margin-top: 4px;
+}
+
+.table-content tbody td .primary-td {}
+
+.table-content tbody td .primary-td {
+    color: #464F60;
+    margin-top: 4px;
+}
+
+.loss {
+    color: #D12953 !important;
+}
+
+.gain {
+    color: #14804A !important;
+}
+
+.table-content tbody td .secondary-td {
+    color: #687182;
+    margin-top: 4px;
+}
+
+.status-card {
+    padding: .3em .7em;
+    border-radius: 50em;
+}
+
+.status-card.open {
+    color: #4F5AED;
+    background: #F0F1FA;
+}
+
+.status-card.paid {
+    color: #14804A;
+    background: #E1FCEF;
+}
+
+.status-card.inactive {
+    color: #5A6376;
+    background: #E9EDF5;
+}
+
+.status-card.paid {
+    color: #14804A;
+    background: #E1FCEF;
+}
+
+.status-card.due {
+    color: #D12953;
+    background: #FAF0F3;
+}
+
+.table-content tbody tr:hover {
+    background: rgb(236, 236, 236);
+    cursor: default;
+}
+
+.table-content input[type=checkbox] {
+    cursor: pointer;
+    width: 1em;
+    scale: 1.2;
+}
+
+
+@media screen and (width < 1300px) {
+    body {
+        font-size: .9em;
+    }
+    .table-container {
+        width: min(80em, 90%);
+    }
+}
+@-moz-document url-prefix() {
+    .table-content thead {
+        background: #f7f9fd;
+    }
+}
