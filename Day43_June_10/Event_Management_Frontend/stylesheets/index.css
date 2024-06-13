@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gradient: linear-gradient(45deg, #FF0F7B, #F74C06);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: poppins;
+    font-weight: 400;
+}
+
+.home-section-container {
+    --bg-white-overlay: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(var(--bg-white-overlay), var(--bg-white-overlay)), url("/assets/background_1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: .8em 2em;
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(30px);
+
+}
+
+.nav-container .nav-left {
+    display: flex;
+}
+
+.nav-container .nav-left img {
+    height: 2.5em;
+}
+
+.nav-container .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-container .nav-item {
+    white-space: nowrap;
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+}
+
+.home-section-container .home-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+}
+
+.home-section-container .home-text-container {
+    font-family: Prompt;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.home-section-container .plan-event-btn {
+    border: none;
+    outline: none;
+    background: white;
+    padding: .6em 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: .9em;
+    border-radius: 100em;
+}
+
+.home-section-container .plan-event-btn span {
+    display: flex;
+    font-weight: 600;
+    background: var(--primary-gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+.commitment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+    padding: 5em 0;
+    background: #f4f4f4;
+}
+
+.section-title {
+    font-family: prompt;
+    color: #403F3F;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.commitment-container .commitment {
+    width: min(50em, 95%);
+    text-align: center;
+    color: #505050;
+    font-size: 1.1em;
+}

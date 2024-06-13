@@ -1,0 +1,22 @@
+$flex-directions: (row, row-reverse, column, column-reverse);
+$align-items: (flex-start, flex-end, center, baseline, stretch);
+$justify-content: (flex-start, flex-end, center, space-between, space-around, space-evenly);
+
+@each $direction in $flex-directions {
+  .flex-#{$direction} {
+    display: flex;
+    flex-direction: $direction;
+
+    @each $alignment in $align-items {
+      &.items-#{$alignment} {
+        align-items: $alignment;
+      }
+    }
+
+    @each $justification in $justify-content {
+      &.justify-#{$justification} {
+        justify-content: $justification;
+      }
+    }
+  }
+}

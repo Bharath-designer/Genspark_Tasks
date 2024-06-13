@@ -1,0 +1,153 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row.items-flex-start {
+  align-items: flex-start;
+}
+.flex-row.items-flex-end {
+  align-items: flex-end;
+}
+.flex-row.items-center {
+  align-items: center;
+}
+.flex-row.items-baseline {
+  align-items: baseline;
+}
+.flex-row.items-stretch {
+  align-items: stretch;
+}
+.flex-row.justify-flex-start {
+  justify-content: flex-start;
+}
+.flex-row.justify-flex-end {
+  justify-content: flex-end;
+}
+.flex-row.justify-center {
+  justify-content: center;
+}
+.flex-row.justify-space-between {
+  justify-content: space-between;
+}
+.flex-row.justify-space-around {
+  justify-content: space-around;
+}
+.flex-row.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flex-row-reverse.items-flex-start {
+  align-items: flex-start;
+}
+.flex-row-reverse.items-flex-end {
+  align-items: flex-end;
+}
+.flex-row-reverse.items-center {
+  align-items: center;
+}
+.flex-row-reverse.items-baseline {
+  align-items: baseline;
+}
+.flex-row-reverse.items-stretch {
+  align-items: stretch;
+}
+.flex-row-reverse.justify-flex-start {
+  justify-content: flex-start;
+}
+.flex-row-reverse.justify-flex-end {
+  justify-content: flex-end;
+}
+.flex-row-reverse.justify-center {
+  justify-content: center;
+}
+.flex-row-reverse.justify-space-between {
+  justify-content: space-between;
+}
+.flex-row-reverse.justify-space-around {
+  justify-content: space-around;
+}
+.flex-row-reverse.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-column.items-flex-start {
+  align-items: flex-start;
+}
+.flex-column.items-flex-end {
+  align-items: flex-end;
+}
+.flex-column.items-center {
+  align-items: center;
+}
+.flex-column.items-baseline {
+  align-items: baseline;
+}
+.flex-column.items-stretch {
+  align-items: stretch;
+}
+.flex-column.justify-flex-start {
+  justify-content: flex-start;
+}
+.flex-column.justify-flex-end {
+  justify-content: flex-end;
+}
+.flex-column.justify-center {
+  justify-content: center;
+}
+.flex-column.justify-space-between {
+  justify-content: space-between;
+}
+.flex-column.justify-space-around {
+  justify-content: space-around;
+}
+.flex-column.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.flex-column-reverse.items-flex-start {
+  align-items: flex-start;
+}
+.flex-column-reverse.items-flex-end {
+  align-items: flex-end;
+}
+.flex-column-reverse.items-center {
+  align-items: center;
+}
+.flex-column-reverse.items-baseline {
+  align-items: baseline;
+}
+.flex-column-reverse.items-stretch {
+  align-items: stretch;
+}
+.flex-column-reverse.justify-flex-start {
+  justify-content: flex-start;
+}
+.flex-column-reverse.justify-flex-end {
+  justify-content: flex-end;
+}
+.flex-column-reverse.justify-center {
+  justify-content: center;
+}
+.flex-column-reverse.justify-space-between {
+  justify-content: space-between;
+}
+.flex-column-reverse.justify-space-around {
+  justify-content: space-around;
+}
+.flex-column-reverse.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/*# sourceMappingURL=main.css.map */

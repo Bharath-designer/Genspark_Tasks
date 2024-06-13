@@ -149,6 +149,7 @@ body {
     border-collapse: collapse;
     width: 100%;
     font-size: .875em;
+    table-layout: auto;
 }
 
 .table-content thead {
