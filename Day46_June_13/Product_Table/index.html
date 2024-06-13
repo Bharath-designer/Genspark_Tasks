@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="add-product-container collapsed">
+        <button onclick="toggleForm()" class="form-toggle-btn">
+            <span class="add">Add Product</span>
+            <span class="close">Close</span>
+        </button>
+        <form onsubmit="handleSubmit(event)" class="add-product-form" action="">
+            <h3 class="title">Add Product</h3>
+            <div class="field-container">
+                <label for="product-name">Product Name</label>
+                <input name="name" type="text" id="product-name">
+            </div>
+            <div class="field-container">
+                <label for="product-price">Price</label>
+                <input name="price" type="number" id="product-price">
+            </div>
+            <div class="field-container">
+                <label for="product-qty">Quantity</label>
+                <input name="quantity" type="number" id="product-qty">
+            </div>
+            <div class="field-container">
+                <label for="product-img">Product Image</label>
+                <input name="image" type="file" id="product-img">
+            </div>
+            <div class="error-section">
+            </div>
+            <div class="submit-btn-container">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Picture</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.add-product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.add-product-container .form-toggle-btn {
+    margin-left: auto;
+    color: white;
+    font-weight: 500;
+    padding: .8em 2em;
+    border: none;
+    cursor: pointer;
+    border-radius: .25em;
+    background: #d41717;
+}
+
+.add-product-container.collapsed .form-toggle-btn {
+    background: #1795d4;
+}
+
+.add-product-container.collapsed .add-product-form {
+    display: none !important;
+}
+
+.add-product-container .form-toggle-btn .close {
+    display: inline-block;
+}
+
+.add-product-container.collapsed .form-toggle-btn .close{
+    display: none;
+}
+
+.add-product-container.collapsed .form-toggle-btn .add{
+    display: block;
+}
+
+.add-product-container .form-toggle-btn .add{
+    display: none;
+}
+
+.add-product-form {
+    width: min(30em, 95%);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(128, 128, 128, 0.345);
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: .25em;
+    gap: 1.5em;
+}
+
+.add-product-form .title {
+    text-align: center;
+}
+
+.add-product-form .field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5em;
+}
+
+.add-product-form .field-container label {
+    color: #414244;
+}
+
+.add-product-form .field-container input {
+    padding: .8em 1em;
+    outline: none;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 2px;
+    width: 100%;
+}
+
+.submit-btn-container button {
+    background: #1795d4;
+    color: white;
+    font-weight: 500;
+    padding: .8em 2em;
+    border: none;
+    cursor: pointer;
+    border-radius: .25em;
+}
+
+.error-section {
+    color: red;
+}
+
+.product-table {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.product-img {
+    height: 6em;
+}
+
+.product-table {
+    border-collapse: collapse;
+}
+
+.product-table th {
+    padding: .5em;
+}
+
+.product-table td,
+.product-table th {
+    border: 1px solid black;
+    padding: .5em 1em;
+}
