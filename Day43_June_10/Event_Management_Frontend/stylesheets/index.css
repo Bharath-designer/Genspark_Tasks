@@ -209,3 +209,38 @@ body {
     padding: 1em;
     text-align: justify;
 }
+
+.our-testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
+    --bg-overlay: rgb(39, 39, 39, .8);
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("/assets/background_2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.our-testimonial-container .section-title {
+    color: white;
+}
+
+.testimonials-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+}
+
+.testimonials-container .testimonial {
+    width: fit-content;
+    width: 300px;
+}
+
+
+/* .swiper-slide-active{
+  background-color: blue !important;
+} */

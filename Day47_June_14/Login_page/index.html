@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts/validator.js" type="module"></script>
+    <script defer src="scripts/script.js" type="module"></script>
+    <script defer src="scripts/events.js" type="module"></script>
+    
+
+</head>
+
+<body>
+    <div class="vector-bg vector-bg-1">
+        <img src="assets/vector1.svg" alt="">
+    </div>
+    <div class="vector-bg vector-bg-2">
+        <img src="assets/vector2.svg" alt="">
+    </div>
+    <div class="login-page-wrapper">
+        <form class="login-container">
+            <div class="form-fields">
+                <label for="username" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="username" name="name" placeholder="USERNAME" type="text">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+                <label for="phone" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="phone" name="phone" placeholder="PHONE NUMBER" type="text">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+                <label for="dob" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="dob" name="dob" placeholder="PHONE NUMBER" type="date">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+                <label data-disabled for="age" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input readonly id="age" name="age" placeholder="AGE" type="text">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+                <div class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="multi-field-container">
+                        <div class="field-title">Gender</div>
+                        <div class="multi-field-wrapper">
+                            <span>
+                                <input id="male" name="gender" value="male" type="radio">
+                                <label for="male">Male</label>
+                            </span>
+                            <span>
+                                <input id="female" name="gender" value="female" type="radio">
+                                <label for="female">Female</label>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+                <div class="error-section"></div>
+                <div class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="multi-field-container">
+                        <div class="field-title">Qualification</div>
+                        <div class="multi-field-wrapper">
+                            <span>
+                                <input id="be" name="qualification" value="BE/BTECH" type="checkbox">
+                                <label for="be">B.E/B.TECH</label>
+                            </span>
+                            <span>
+                                <input id="me" name="qualification" value="ME/MTECH" type="checkbox">
+                                <label for="me">M.E/M.TECH</label>
+                            </span>
+                            <span>
+                                <input id="mba" name="qualification" value="MBA" type="checkbox">
+                                <label for="mba">MBA</label>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+                <div class="error-section"></div>
+                <label for="profession" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="profession" placeholder="PROFESSION" name="profession" list="browsers">
+                        <datalist id="browsers">
+                        </datalist>
+                    </span>
+                </label>
+                <div class="error-section"></div>
+            </div>
+            <button type="submit" class="login-btn">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
