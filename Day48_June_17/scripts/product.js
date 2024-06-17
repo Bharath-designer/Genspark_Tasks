@@ -47,3 +47,7 @@ const updateDetails = async () => {
 }
 
 updateDetails()
+
+const back = () => {
+    history.back()
+}

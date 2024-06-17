@@ -86,7 +86,7 @@ body {
 .price {
     font-weight: bold;
     margin-top: .5em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .loader {
@@ -97,7 +97,12 @@ body {
 .back-link {
     text-align: end;
 }
-.back-link a{
+.back-link button{
     text-decoration: none;
     color: blue;
+    border-radius: 0;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    padding: .5em;
 }
