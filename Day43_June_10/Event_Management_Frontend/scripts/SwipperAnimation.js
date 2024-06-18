@@ -1,7 +1,7 @@
 var swiperEl = document.querySelector('.swiper-container');
 var mySwiper = new Swiper (swiperEl, {
 //   loop: true,
-  spaceBetween: 32,
+  spaceBetween: 50,
   slidesPerView: 'auto',
   loopedSlides: 0,
   loopAdditionalSlides: 6,
