@@ -1,0 +1,90 @@
+body {
+    --bg-overlay: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    height: 100svh;
+    overflow: auto;
+    background:linear-gradient(var(--bg-overlay),var(--bg-overlay)) ,url('../assets/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2em;
+}
+
+.quotes-wrapper {    
+    height: 100%;
+    gap: 1em;
+    display:     flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.search-container  {
+    display: flex;
+    gap: .5em;
+}
+
+.search-container input {
+    padding: .3em;
+    outline: none;
+}
+.search-container button{
+    border: none;
+    border-radius: 0;
+    padding: 0 1em;
+}
+
+.content {
+    flex:1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 1em;
+}
+
+.quotes {
+    flex: 1;
+    width: min(90%, 50em);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.quotes .quote {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: .25em;
+    padding: 1em;
+    gap: 1em;
+}
+
+.quotes .quote .value {
+}
+
+.quotes .quote .author {
+    font-size: .8em;
+    color: rgb(199, 199, 199);
+}
+
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.pagination button {
+    padding: .5em 1em;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}

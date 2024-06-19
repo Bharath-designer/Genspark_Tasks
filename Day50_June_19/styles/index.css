@@ -1,0 +1,33 @@
+
+
+body {
+    padding: 2em;
+    --bg-overlay: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    height: 100svh;
+    overflow: auto;
+    background:linear-gradient(var(--bg-overlay),var(--bg-overlay)) ,url('../assets/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-wrapper {    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-text {
+    width: min(90%, 40em);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2em;
+    color: rgb(195, 195, 195);
+}
