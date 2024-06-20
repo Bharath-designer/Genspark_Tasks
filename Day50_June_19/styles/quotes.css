@@ -14,7 +14,7 @@ body {
 .quotes-wrapper {    
     height: 100%;
     gap: 1em;
-    display:     flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -24,6 +24,7 @@ body {
 .search-container  {
     display: flex;
     gap: .5em;
+    justify-content: space-between;
 }
 
 .search-container input {
@@ -34,6 +35,32 @@ body {
     border: none;
     border-radius: 0;
     padding: 0 1em;
+}
+
+.sort-btn {
+    position: relative;
+    display: flex;
+    background: red;
+}
+
+.sort-btn .sort-container {
+    display: flex;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    /* top: calc(100% + .5em); */
+    width: 100%;
+    z-index: 9999;
+    gap: .5em;
+}
+
+.sort-btn:hover .sort-container {
+    display: flex;
+}
+
+
+.sort-container button {
+    padding: .5em;
 }
 
 .content {

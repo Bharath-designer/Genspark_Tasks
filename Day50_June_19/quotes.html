@@ -21,6 +21,14 @@
             <input class="search-inp" type="text">
             <button onclick="search()">Search</button>
             <button onclick="clearInp()">Clear</button>
+            <div class="sort-btn">
+                <button>Sort</button>
+                <div class="sort-container">
+                    <button onclick="sort('-')">-</button>
+                    <button onclick="sort('asc')">A-Z</button>
+                    <button onclick="sort('desc')">Z-A</button>
+                </div>
+            </div>
         </div>
         <div class="content">
             <div class="quotes">
