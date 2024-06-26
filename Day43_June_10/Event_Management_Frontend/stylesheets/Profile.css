@@ -1,0 +1,423 @@
+.profile-wrapper {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    display: flex;
+}
+
+.profile-left {
+    width: 20em;
+    background: #101036;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-left .profile-logo {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.profile-left .profile-logo img {
+    width: min(70%, 10em);
+    user-select: none;
+    cursor: pointer;
+}
+
+.profile-left .profile-section-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+}
+
+.profile-left .profile-section-links .profile-tab-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1.2em;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border-radius: .5em;
+}
+
+.profile-left .profile-section-links .profile-tab-btn:hover {
+    background: #1e1e4c;
+}
+
+.profile-left .profile-section-links .profile-tab-btn.active {
+    background: #2c2c56;
+    font-weight: bold;
+}
+
+.profile-left .logout-container {
+    padding: 1em 0;
+    text-align: center;
+    border-top: 2px solid white;
+    cursor: pointer;
+}
+
+
+
+.profile-right {
+    flex: 1;
+    padding: 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1em;
+}
+
+.profile-right .loader {
+    display: none;
+}
+
+.profile-right.loading .loader {
+    display: flex;
+    align-items: center;
+}
+
+.profile-section-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-event-btn {
+    padding: .8em 1.5em;
+    border: none;
+    background: #101036;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: .25em;
+}
+
+.profile-list-container {
+    border: 2px solid #dadada;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+}
+
+.profile-right .profile-list {
+    border-bottom: 2px solid #dadada;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: .875em;
+    transition: 100ms ease;
+}
+
+.profile-right .profile-list.pointer {
+    cursor: pointer;
+}
+
+
+.profile-right .list .profile-list:hover {
+    background: rgb(234, 234, 234);
+}
+
+.profile-right .top-row {
+    display: flex;
+    justify-content: space-between;
+    color: #494949;
+    font-weight: 500;
+    font-size: 1em;
+    align-items: center;
+}
+
+.profile-right .inner-content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.event-inner-content {
+    font-size: .9em;
+    padding: 1em 2em;
+}
+
+.profile-right .desc {
+    color: grey;
+}
+
+.profile-right .data-row {
+    font-size: .9em;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: .5em;
+}
+
+.profile-right .data-cell {
+    display: flex;
+    gap: .5em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.profile-right .data-label {
+    color: #868686;
+}
+
+.profile-right .data-value {
+    flex: 1;
+    color: #454545;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-right .data-column {
+    flex: 1;
+    display: flex;
+}
+
+
+.tag {
+    background: grey;
+    padding: .5em 1.5em;
+    font-size: .85em;
+    border-radius: 100em;
+    color: white;
+    display: flex;
+    gap: .5em;
+    white-space: nowrap;
+}
+
+.tag.action {
+    cursor: pointer;
+    user-select: none;
+}
+
+.tag img {
+    width: 1em;
+}
+
+.tag.warning {
+    background: #F9D689;
+    color: #C40C0C;
+}
+
+.tag.success {
+    background: #D8FFBA;
+    color: #009154;
+}
+
+.tag.fail {
+    color: #FF0000;
+    background: #FFD1D1;
+}
+
+.request-details {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.admin-response {
+    margin-top: 1em;
+}
+
+.response-message {
+    margin-top: 1em;
+    color: #4D4D4D;
+    font-size: .9em;
+}
+
+.action-tags-container {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.action-btn {
+    --clr: #FF903F;
+    outline: none;
+    border: none;
+    padding: .4em 1.5em;
+    border: 2px solid var(--clr);
+    background: none;
+    color: var(--clr);
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+    user-select: none;
+}
+
+.order-action-btn {
+    display: flex;
+    justify-content: flex-start;
+    font-size: .8em;
+    margin-top: .5em;
+    white-space: nowrap;
+}
+
+.scheduled-event-list-action-container {
+    font-size: .9em;
+    display: flex;
+    margin-top: 1em;
+}
+
+
+
+.rating-container {
+    display: flex;
+    gap: .3em;
+    margin-top: 1em;
+}
+
+.rating-container .rating {
+    display: flex;
+}
+
+.rating-container img {
+    width: 1.5em;
+    pointer-events: none;
+}
+
+.action-btn-container {
+    margin-top: 2em;
+    display: flex;
+    gap: .5em;
+}
+
+.action-btn-admin {
+    --clr: #777777;
+    outline: none;
+    border: none;
+    padding: .6em 1.5em;
+    border: 1px solid var(--clr);
+    background: none;
+    color: var(--clr);
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.action-btn-admin img {
+    width: 1em;
+}
+
+
+.event-overlay-container {
+    position: absolute;
+    background: rgb(0, 0, 0, .8);
+    inset: 0;
+    overflow: auto;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.event-overlay-container .add-edit-event-form {
+    width: min(90%, 60em);
+    background: white;
+    max-height: 90%;
+    overflow: auto;
+    border-radius: .25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.event-overlay-container .form-title {
+    padding: 1em;
+    width: 100%;
+    border-bottom: 1px solid #BDBDBD;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+
+.event-overlay-container .fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    width: min(40em,90%);
+    padding: 2em 0;
+    flex: 1;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.event-overlay-container .fields-container .inp-field {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+
+.event-overlay-container .inp-field label {
+    color: #575757;
+    font-size: .9em;
+}
+
+.event-overlay-container .inp-field .error-section {
+    font-size: .9em;
+    color: red;
+}
+
+.event-overlay-container .inp-field input,
+.event-overlay-container .inp-field textarea {
+    padding: .7em;
+    outline: none;
+    border: 1px solid #A0A0A0;
+    border-radius: .25em;
+}
+
+.event-overlay-container .inp-field textarea {
+    resize: vertical;
+    min-height: 10em;
+    max-height: 20em;
+}
+
+.event-overlay-container .inp-field .event-status-container {
+    display: flex;
+}
+
+.event-overlay-container .inp-field .event-status-container img {
+    width: 3em;
+    cursor: pointer;
+}
+
+.event-overlay-container .form-btn-container {
+    padding: .8em 2em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    border-top: 1px solid #BDBDBD;
+
+}
+
+.event-overlay-container .form-btn-container button {
+    border: none;
+    padding: .7em 2em;
+    background: white;
+    border-radius: .5em;
+}
+
+.event-overlay-container .form-btn-container button.save-btn {
+    background: #1C8C00;
+    color: white;
+}
+
+.event-overlay-container .form-btn-container button.cancel-btn {
+    border: 1px solid #727272;
+}

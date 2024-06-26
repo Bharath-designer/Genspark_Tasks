@@ -1,22 +1,3 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-gradient: linear-gradient(45deg, #FF0F7B, #F74C06);
-}
-
-html,
-body {
-    overflow-x: hidden;
-    font-family: poppins;
-    font-weight: 400;
-}
-
 .home-section-container {
     --bg-white-overlay: rgba(0, 0, 0, 0.8);
     background: linear-gradient(var(--bg-white-overlay), var(--bg-white-overlay)), url("/assets/background_1.jpg");
@@ -33,8 +14,9 @@ body {
     padding: .8em 2em;
     background: rgba(217, 217, 217, 0.1);
     backdrop-filter: blur(30px);
-
 }
+
+
 
 .nav-container .nav-left {
     display: flex;
@@ -48,6 +30,29 @@ body {
     display: flex;
     align-items: center;
     gap: 2em;
+}
+.nav-container .nav-right.hidden {
+    display: none;
+}
+
+.nav-right .login-btn {
+    display: block;
+}
+
+.nav-right .profile-btn {
+    display: none;
+}
+
+.nav-right .profile-btn img{
+    width: 2em;
+}
+
+.nav-right.authenticated .login-btn {
+    display: none;
+}
+
+.nav-right.authenticated .profile-btn {
+    display: flex;
 }
 
 .nav-container .nav-item {
@@ -290,8 +295,16 @@ body {
   background-color: blue !important;
 } */
 
+.home-footer {
+    padding: .5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .social-container {
     display: flex;
+    gap: .5em;
 }
 
 .social-container .icon {
@@ -299,9 +312,11 @@ body {
     background: black;
     border-radius: 50%;
     padding: .3em;
+    cursor: pointer;
 }
 
 .social-container .icon img {
+    width: 1.3em;
     display: flex;
-    width: 1.7      em;
+    aspect-ratio: 1;
 }

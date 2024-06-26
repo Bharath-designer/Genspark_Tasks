@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="./assets/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./stylesheets/Auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script defer type="module" src="./scripts/Login.js"></script>
+
+</head>
+
+<body>
+    <div class="vector-bg vector-bg-1">
+        <img src="assets/vector1.svg" alt="">
+    </div>
+    <div class="vector-bg vector-bg-2">
+        <img src="assets/vector2.svg" alt="">
+    </div>
+    <div class="login-page-wrapper">
+        <form class="login-container">
+            <div class="form-fields">
+                <label for="email" class="form-field">
+                    <span class="icon">
+                        <img src="assets/username.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="email" name="email" placeholder="EMAIL" type="text">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+                <label for="password" class="form-field">
+                    <span class="icon">
+                        <img src="assets/password.svg" alt="">
+                    </span>
+                    <span class="inp-field">
+                        <input id="password" name="password" placeholder="PASSWORD" type="text">
+                    </span>
+                </label>
+                <div class="error-section"></div>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <a  class="switch-link" href="Register.html">Don't have an account? <span>Sign Up</span></a>
+        </form>
+    </div>
+</body>
+
+</html>
