@@ -9,7 +9,7 @@ const fetchData = async (url, method, payload, skipActions) => {
             success: false,
             data: null
         }
-        if (!["/api/register", "/api/login"].includes(url)) {
+        if (!["/api/register", "/api/login", "/api/events"].includes(url)) {
             if (!token) {
                 if (skipActions) {
                     return skipActionsResult
@@ -51,6 +51,7 @@ const fetchData = async (url, method, payload, skipActions) => {
             }
 
         } else {
+            console.log(rawData);
             if ([401, 403].includes(rawData.status)) {
                 if (skipActions) {
                     skipActionsResult.data = data
@@ -61,31 +62,22 @@ const fetchData = async (url, method, payload, skipActions) => {
                 }
             }
 
-            if (rawData.status === 400) {
-                if (skipActions) {
-                    skipActionsResult.isAuthenticated = true
-                    skipActionsResult.success = false
-                    skipActionsResult.data = data
-                    return skipActionsResult
-                }
-
-                alert(JSON.stringify(data))
-                throw new Error(data)
-            }
-
             if (skipActions) {
                 skipActionsResult.isAuthenticated = true
                 skipActionsResult.success = false
+                skipActionsResult.data = data
                 return skipActionsResult
             }
 
-            alert("something went wrong")
+            alert(typeof data === 'string' ? data : data.errors[0] || data.message)
             console.error('Status code:', rawData.status);
-            throw new Error("Internal Server Error")
+            console.error('Status message', data);
+            throw new Error(data)
+
         }
 
     } catch (error) {
-        throw new Error(error.message)
+        throw new Error(error)
     }
 }
 

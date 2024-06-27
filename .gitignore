@@ -213,6 +213,11 @@ project.lock.json
 **/node_modules/*
 **/wwwroot/*
 
+# For python
+*.idea/
+*venv/
+*__pycache__/
+
 # SpecFlow specific
 *.feature.cs
 *.feature.xlsx.*

@@ -5,8 +5,8 @@ const createEventOverlayTemplate = (formTitle, formSubmitHandler, disableStatusI
     const template = document.createElement("template")
     template.innerHTML =
         `
-    <div class="event-overlay-container">
-        <form class="add-edit-event-form">
+    <div class="event-overlay-container overlay-container">
+        <form>
             <div class="form-title">${formTitle}</div>
             <div class="fields-container">
                 <div class="inp-field">
@@ -76,6 +76,9 @@ const submitHandler = async (e, saveFuntion) => {
 
     const eventNameErrorSection = formElement.querySelector("[name=eventName] + .error-section")
     const descriptionErrorSection = formElement.querySelector("[name=description] + .error-section")
+    eventNameErrorSection.textContent = ""
+    descriptionErrorSection.textContent = ""
+
     if (!eventName) {
         eventNameErrorSection.textContent = "EventName is required"
         return;

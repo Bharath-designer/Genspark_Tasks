@@ -5,6 +5,8 @@ import {
     onRequestListMount,
     onScheduledEventListMount,
     onAdminManageEventMount,
+    onAdminRequestMount,
+    onAdminScheduledEventListMount
 } from './MountEvents.js'
 
 import {
@@ -12,7 +14,7 @@ import {
     ordersMounted,
     requestDetailsMounted,
     scheduledEventListMounted,
-    adminManageEventMounted
+    adminScheduledEventListMounted
 } from './MountedEvents.js'
 
 const tabsOptions = {
@@ -43,9 +45,19 @@ const tabsOptions = {
     adminManageEvents : {
         sectionTitle: "Manage Events",
         tabClassName: "manage-event",
-        onMount: onAdminManageEventMount,
-        onMounted: adminManageEventMounted
-    }
+        onMount: onAdminManageEventMount
+    },
+    adminRequests : {
+        sectionTitle: "Requests",
+        tabClassName: "admin-requests",
+        onMount: onAdminRequestMount
+    },
+    adminScheduledEvents: {
+        sectionTitle: "Scheduled Events",
+        tabClassName: "scheduled-event",
+        onMount: onAdminScheduledEventListMount,
+        onMounted: adminScheduledEventListMounted
+    },
 }
 
 let loading = false
@@ -54,7 +66,7 @@ export const makeActiveTab = async (tab, requestId) => {
     if (loading) return;
     loading = true
     const options = tabsOptions[tab]
-    if (!options) return;
+    if (!options) throw new Error(`Tab '${tab}' options are not configured`);
     const profileSectionTitle = document.querySelector(".profile-section-title")
     const sectionTitle = options.sectionTitle
     profileSectionTitle.innerHTML = sectionTitle
@@ -135,6 +147,16 @@ const navItems = {
             className: "manage-event",
             displayName:"Manage Events"
         },
+        {
+            tabName: "adminRequests",
+            className: "admin-requests",
+            displayName:"Requests"
+        },
+        {
+            tabName: "adminScheduledEvents",
+            className: "scheduled-event",
+            displayName:"Scheduled Events"
+        },
     ]
 }
 
@@ -158,3 +180,28 @@ const makeTabsBasedOnRole = async () => {
 }
 
 makeTabsBasedOnRole()
+
+
+let isNavOpen = false
+const hamburgerIcon = document.querySelector(".hamburger-icon")
+const profileLeft = document.querySelector(".profile-left")
+
+const autoCloseFunc = (e) => {
+    if (!e.target.closest('.profile-left') || e.target.closest('.profile-tab-btn')) {
+        hamburgerIcon.click()
+    }
+}
+
+hamburgerIcon.onclick = (e) => {
+    e.stopPropagation()
+    profileLeft.classList.toggle('hidden')
+    isNavOpen = !isNavOpen
+    if (isNavOpen) {
+        hamburgerIcon.src = "./assets/white_close.svg"
+        document.body.addEventListener('click', autoCloseFunc)
+    } else {
+        hamburgerIcon.src = "./assets/hamburger.svg"
+        document.body.removeEventListener('click', autoCloseFunc)
+    }
+}
+

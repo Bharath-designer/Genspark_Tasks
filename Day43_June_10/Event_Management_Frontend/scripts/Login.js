@@ -84,6 +84,7 @@ const handleSubmit = async (e) => {
     if (success) {
         document.cookie = `token=${data.token}`
         location.href = "/"
+        return;
     }
 
     alert(data)

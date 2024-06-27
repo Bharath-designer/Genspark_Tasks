@@ -3,6 +3,7 @@ import { parseDate } from "../utilities/ParseDate.js";
 import { statusMapWithClassName } from "../utilities/StatusMap.js";
 import { generateRatingStars } from "../utilities/GeneratingRating.js";
 import { createAddEventOverlay, createEditEventOverlay } from "./ManageEventOverlay.js";
+import { createRespondToEventOverlay } from "./RespondToEventOverlay.js";
 
 export const onRequestListMount = async (parentContainer) => {
     const data = await fetchData("/api/user/requests", "GET")
@@ -405,6 +406,202 @@ export const onAdminManageEventMount = async (parentContainer) => {
             createEditEventOverlay(event)
         }
         container.appendChild(requestElementContent)
+    })
+    parentContainer.appendChild(container);
+
+}
+
+const renderAdminRequests = (parentContainer, data, headerBtn) => {
+    const container = document.createElement("div")
+    container.classList.add("profile-list-container", "list", "quotation-requests-container")
+    const profileSectionTitle = parentContainer.querySelector(".profile-section-title")
+    profileSectionTitle.querySelector(".filter-request-btn")?.remove()
+    profileSectionTitle.appendChild(headerBtn)
+
+    data.forEach(request => {
+        const requestElement = document.createElement("template")
+        requestElement.innerHTML =
+            `
+            <div data-quotation-request-id=${request.quotationRequestId} class="profile-list">
+                    <div class="top-row">
+                        <span class="list-title">${request.eventCategory}</span>
+                        <span class="tag ${statusMapWithClassName[request.quotationStatus]}">${request.quotationStatus}</span>
+                    </div>
+                    <div class="inner-content">
+                        <div class="data-row">
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Event Start Date:</div>
+                                    <div class="data-value">${parseDate(request.eventStartDate)}</div>
+                                </div>
+                            </div>
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Event End Date:</div>
+                                    <div class="data-value">${parseDate(request.eventEndDate)}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Venue Type:</div>
+                                    <div class="data-value">${request.venueType}</div>
+                                </div>
+                            </div>
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Food Preference Type:</div>
+                                    <div class="data-value">${request.foodPreference}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Location Details:</div>
+                                <div class="data-value">${request.locationDetails}</div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Special Instructions:</div>
+                                <div class="data-value">${request.specialInstructions}</div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Catering Instructions:</div>
+                                <div class="data-value">${request.cateringInstructions || "-"}</div>
+                            </div>
+                        </div>
+                        ${request.quotationStatus === 'Responded' ? "" :
+                `
+                            <div class="action-btn-container">
+                                <button data-event-category-id='{event.eventCategoryId} 'class="action-btn respond-to-event-btn">
+                                    <span>Respond</span>
+                                </button>
+                            </div>
+                            `
+            }
+                    </div>
+                </div>
+        `
+        const content = requestElement.content
+
+        if (request.quotationStatus === "Initiated") {
+            const respondBtn = content.querySelector(".respond-to-event-btn")
+            respondBtn.onclick = () => createRespondToEventOverlay(request.quotationRequestId)
+        }
+
+        container.appendChild(content)
+    })
+    parentContainer.appendChild(container);
+}
+
+export const onAdminRequestMount = async (parentContainer) => {
+    const data = await fetchData("/api/admin/quotations", "GET")
+
+    const filterNewBtn = document.createElement("button")
+    filterNewBtn.classList.add("filter-request-btn", "new-request-btn")
+    filterNewBtn.textContent = "Show New"
+    
+    const showAllBtn = document.createElement("button")
+    showAllBtn.classList.add("filter-request-btn", "all-request-btn")
+    showAllBtn.textContent = "Show All"
+    
+    showAllBtn.onclick = () => {
+        parentContainer.querySelector(".profile-list-container").remove()
+        renderAdminRequests(parentContainer, data, filterNewBtn)
+    }
+    
+    filterNewBtn.onclick = () => {
+        parentContainer.querySelector(".profile-list-container").remove()
+        const filteredData = data.filter(element=>element.quotationStatus === 'Initiated')
+        renderAdminRequests(parentContainer, filteredData, showAllBtn)
+    }
+    
+    renderAdminRequests(parentContainer, data, filterNewBtn)
+}
+
+
+export const onAdminScheduledEventListMount = async (parentContainer) => {
+    const data = await fetchData("/api/admin/events/scheduled", "GET")
+    const container = document.createElement("div")
+    container.classList.add("profile-list-container", "list", "scheduled-event-list")
+    data.forEach(event => {
+        const requestElement = document.createElement("template")
+        requestElement.innerHTML =
+            `
+                <div class="profile-list">
+                    <div class="top-row">
+                        <span class="list-title">${event.eventCategory}</span>
+                        <span class="tag ${statusMapWithClassName[event.isCompleted ? "Completed" : "Pending"]}">${event.isCompleted ? "Completed" : "Not Completed"}</span>
+                    </div>
+                    <div class="inner-content">
+
+                        <div class="data-row">
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Event Start Date:</div>
+                                    <div class="data-value">${parseDate(event.eventStartDate)}</div>
+                                </div>
+                            </div>
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Event End Date:</div>
+                                    <div class="data-value">${parseDate(event.eventEndDate)}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Venue Type:</div>
+                                    <div class="data-value">${event.venueType}</div>
+                                </div>
+                            </div>
+                            <div class="data-column">
+                                <div class="data-cell">
+                                    <div class="data-label">Food Preference Type:</div>
+                                    <div class="data-value">${event.foodPreference}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Location Details:</div>
+                                <div class="data-value">${event.locationDetails}</div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Special Instructions:</div>
+                                <div class="data-value">${event.specialInstructions}</div>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-cell">
+                                <div class="data-label">Catering Instructions:</div>
+                                <div class="data-value">${event.cateringInstructions || "-"}</div>
+                            </div>
+                        </div>
+                        ${event.isCompleted ?
+                ""
+                :
+                `
+                        <div class="scheduled-event-list-action-container">
+                            <button data-scheduled-event-id=${event.scheduledEventId} class="mark-as-completed-btn action-btn">
+                                Mark as Completed
+                            </button>
+                        </div>
+                            `
+            }
+                    </div>
+                </div>
+                </div>
+            `
+        container.appendChild(requestElement.content)
+
     })
     parentContainer.appendChild(container);
 

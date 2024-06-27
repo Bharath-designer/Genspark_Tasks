@@ -93,3 +93,132 @@ body {
         background: var(--base-color);
     }
 }
+
+
+.overlay-container {
+    position: fixed;
+    background: rgb(0, 0, 0, .8);
+    inset: 0;
+    overflow: auto;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    /* display: none; */
+}
+
+.overlay-container form {
+    width: min(90%, 60em);
+    background: white;
+    max-height: 90%;
+    overflow: auto;
+    border-radius: .25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.overlay-container .form-title {
+    padding: 1em;
+    width: 100%;
+    border-bottom: 1px solid #BDBDBD;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+
+.overlay-container .fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    width: min(40em,90%);
+    padding: 2em 0;
+    flex: 1;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.overlay-container .fields-container .inp-field {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.respond-to-event-form .amount-inp {
+    display: none !important;
+}
+
+.respond-to-event-form.accepted .amount-inp {
+    display: flex !important;
+}
+
+.respond-to-event-form .catering-instruction {
+    display: none !important;
+}
+
+.respond-to-event-form.show-catering-detail .catering-instruction {
+    display: flex !important;
+}
+
+
+.overlay-container .inp-field label {
+    color: #575757;
+    font-size: .9em;
+}
+
+.overlay-container .inp-field .error-section {
+    font-size: .9em;
+    color: red;
+}
+
+.overlay-container .inp-field input,
+.overlay-container .inp-field select,
+.overlay-container .inp-field textarea {
+    padding: .7em;
+    outline: none;
+    border: 1px solid #A0A0A0;
+    border-radius: .25em;
+}
+
+.overlay-container .inp-field textarea {
+    resize: vertical;
+    min-height: 8em;
+    max-height: 20em;
+}
+
+.overlay-container .inp-field .event-status-container {
+    display: flex;
+}
+
+.overlay-container .inp-field .event-status-container img {
+    width: 3em;
+    cursor: pointer;
+}
+
+.overlay-container .form-btn-container {
+    padding: .8em 2em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    border-top: 1px solid #BDBDBD;
+
+}
+
+.overlay-container .form-btn-container button {
+    border: none;
+    padding: .7em 2em;
+    background: white;
+    border-radius: .5em;
+}
+
+.overlay-container .form-btn-container button.save-btn {
+    background: #1C8C00;
+    color: white;
+}
+
+.overlay-container .form-btn-container button.cancel-btn {
+    border: 1px solid #727272;
+}

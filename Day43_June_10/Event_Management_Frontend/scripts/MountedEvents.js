@@ -33,7 +33,6 @@ const bindMarkAsCompletedListener = () => {
         btn.addEventListener("click", async () => {
             const { scheduledEventId } = btn.dataset
             await fetchData(`/api/user/event/${scheduledEventId}`, "PUT")
-            makeActiveTab("scheduledEvents")
         })
     })
 }
@@ -51,13 +50,19 @@ export const requestListMounted = (makeActiveTab) => {
         })
     })
 }
+
 export const ordersMounted = () => {
     bindPaymentEventListener()
 }
 
 export const scheduledEventListMounted = () => {
     bindMarkAsCompletedListener()
+    makeActiveTab("scheduledEvents")
+
 }
 
-export const adminManageEventMounted = () => {
+export const adminScheduledEventListMounted = () => {
+    bindMarkAsCompletedListener()
+    makeActiveTab("adminScheduledEvents")
 }
+
