@@ -1,0 +1,5 @@
+Name: BHARATH
+DOB: 2003-07-06
+Phone: 1010101010
+Email: bharath@gmail.om
+Age: 20
